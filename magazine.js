@@ -5,7 +5,7 @@ let firstEntry;
 
 function setup() {
     // Create canvas
-    createCanvas(windowWidth-20, windowHeight-20);
+    createCanvas(windowWidth-15, windowHeight-20);
     background("rgb(0,0,51)")
 
     // Get the first entry from local storage
@@ -26,15 +26,15 @@ function setup() {
 
 
     // Display title
-    title = text("Download The CBSE 8C Class Magazine!", windowWidth / 2 - 420, windowHeight / 2 + 150);
+    title = text("Download The CBSE 8C Class Magazine!", windowWidth / 4, windowHeight / 1.5);
 
     // Create download button
     downloadButton = createA("https://raw.githubusercontent.com/UniversalTaco/CBSE_8C_Magazine/main/Document.docx", "Download (.DOCX)", "_blank");
-    downloadButton.position(windowWidth / 2 - 50, windowHeight / 2 + 200);
+    downloadButton.position(windowWidth / 2.2, windowHeight / 1.4);
     downloadButton.style('color', '#FFAA00')
 }
 
 function draw() {    
     // Log success message
     console.log("Website startup is a success!");
-} 
+}
