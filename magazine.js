@@ -10,6 +10,12 @@ function setup() {
     // Get the first entry from local storage
     firstEntry = localStorage.getItem("firstEntry");
 
+    // Check if it's the first entry
+    if(firstEntry === null || firstEntry === undefined) {
+        localStorage.setItem("firstEntry", true);
+        alert("This website is optimised for computers, but is meant to also be compatible with other devices as well!");
+    }
+
     // Set text size
     textSize(50);
 
@@ -23,21 +29,19 @@ function setup() {
 }
 
 function draw() {    
-    // Check if it's the first entry
-    if(firstEntry === null || firstEntry === undefined) {
-        alert("This website is optimised for computers, but is meant to also be compatible with other devices as well!");
-        localStorage.setItem("firstEntry", true);
-    }
+    // Log success message
+    console.log("Website startup is a success!");
 } 
 
 function downloadFile() {
     // Alert the user
     alert("Redirecting you to another site!");
 
-    // Download file
-    let filePath = "https://view.officeapps.live.com/op/view.aspx?src=https%3A%2F%2Fraw.githubusercontent.com%2FUniversalTaco%2FCBSE_8C_Magazine%2Fmain%2FDocument.docx&wdOrigin=BROWSELINK";
-    window.open(filePath);
-}
+    // File URL
+    let filePath = "https://raw.githubusercontent.com/UniversalTaco/CBSE_8C_Magazine/main/Document.docx";
 
+    // Open the file in a new tab
+    window.open(filePath, '_blank');
+}
 
 
