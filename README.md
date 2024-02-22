@@ -8,3 +8,4 @@ Updates:
 
   22/2/2024 - Website BETA Launched!
               Another visual overhaul! Made many optimizations and improved compatibility even more.
+              Added Music and Disclaimer page!
